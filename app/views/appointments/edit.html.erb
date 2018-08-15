@@ -1,0 +1,20 @@
+<div class="single-post-card">
+  <div class="card">
+    <div class="card-block">
+      <div class="appointment-content">
+        <div class="appointment-by"></div>
+        <h3><%= @appointment.title %></h3>
+        <p><%= @appointment.description %></p>
+        <p><%= @appointment.start_time.to_formatted_s(:long) %></p>
+        <p><%= @appointment.end_time.to_formatted_s(:long) %></p>
+
+        <p class="links"><%= link_to 'Edit', edit_appointment_path(@appointment) %> | <%= link_to 'Delete', appointment_path(@appointment) %></p>
+      </div>
+    </div>
+  </div><!-- card -->
+</div><!-- col-sm-3 -->
+
+<div class="edit-the-form">
+  <h3 class="edit-form">Edit Appointment</h3>
+  <%= render 'form' %>
+</div>

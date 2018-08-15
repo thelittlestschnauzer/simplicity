@@ -1,0 +1,16 @@
+<div class="left-side" style="float:left">
+      <h3 class="appointment-new" style="text-align:center;">Create Appointment</h3>
+      <%= render 'form' %>
+  </div>
+  <div class="right-side" style="float:right">
+
+    <%= month_calendar events: @appointments do |date, appointments| %>
+    <%= date.day %>
+
+    <% appointments.each do |appointment| %>
+      <div>
+        <%= link_to appointment.title, appointment_path(appointment) %>
+      </div>
+    <% end %>
+  <% end %>
+  </div>

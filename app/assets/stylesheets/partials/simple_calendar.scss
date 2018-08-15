@@ -1,0 +1,115 @@
+.simple-calendar {
+  margin-right: 10px;
+
+  table {
+    border-radius: 5px;
+    -webkit-border-horizontal-spacing: 0px;
+    -webkit-border-vertical-spacing: 0px;
+    background-color: #F4F4F4;
+    // border: 1px solid rgb(221, 221, 221);
+    border-collapse: collapse;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  tr {
+    border-collapse: collapse;
+    border-radius: 5px;
+  }
+
+  th {
+    border-radius: 5px;
+    padding: 6px;
+    border-bottom: 2px solid rgb(221, 221, 221);
+    border-collapse: collapse;
+    // border-left: 1px solid rgb(221, 221, 221);
+    // border-right: 1px solid rgb(221, 221, 221);
+    border-top: 0px none rgb(51, 51, 51);
+    box-sizing: border-box;
+    text-align: left;
+  }
+
+  td {
+
+    padding: 6px;
+    vertical-align: top;
+    width: 14%;
+    // border: 1px solid #ddd;
+    // border-top-color: rgb(221, 221, 221);
+    // border-top-style: solid;
+    // border-top-width: 1px;
+    // border-right-color: rgb(221, 221, 221);
+    // border-right-style: solid;
+    // border-right-width: 1px;
+    // border-bottom-color: rgb(221, 221, 221);
+    // border-bottom-style: solid;
+    // border-bottom-width: 1px;
+    // border-left-color: rgb(221, 221, 221);
+    // border-left-style: solid;
+    // border-left-width: 1px;
+  }
+
+  .day {
+    height: 100px;
+  }
+
+  .wday-0 {}
+  .wday-1 {}
+  .wday-2 {}
+  .wday-3 {}
+  .wday-4 {}
+  .wday-5 {}
+  .wday-6 {}
+
+  .today {
+    background: #30415D;
+    color: #F4F4F4;
+  }
+
+  .past {}
+  .future {}
+
+  .start-date {}
+
+  .prev-month {
+    background: #CDCDCD;
+  }
+  .next-month {
+    background: #CDCDCD;
+  }
+  .current-month {}
+
+  .has-events {}
+
+  .table-striped {
+    border-radius: 10px;
+  }
+  .calendar-title {
+    font-size: 40px;
+    color: #30415D;
+  }
+
+  .calendar-heading {
+    text-align: center;
+  }
+  .calendar-heading a {
+    font-size: 25px;
+    padding: 5px;
+    margin: 5px;
+    color: #4EC5C1;
+    text-decoration: none;
+  }
+  .calendar-heading a:hover {
+    color: #C0B283;
+  }
+  a {
+    color: #4EC5C1;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  a:hover {
+    color: #C0B283;
+    text-decoration: none;
+  }
+}

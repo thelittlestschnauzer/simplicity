@@ -1,0 +1,39 @@
+<section class="todoapp">
+	<header class="header">
+		<h1>Lists</h1>
+			<%= form_for(@list) do |f| %>
+			<% if @list.errors.any? %>
+			  <div id="error_explanation">
+			    <h2>
+			      <%= pluralize(@list.errors.count, "error") %>
+			      prohibited this list from being saved:
+			    </h2>
+
+			    <ul>
+			    <% @list.errors.full_messages.each do |msg| %>
+			      <li><%= msg %></li>
+			    <% end %>
+			    </ul>
+			  </div>
+			<% end %>
+				<%= f.text_field :title, class: "new-todo", placeholder: "What list do we need today?" %>
+				<%= f.submit style: "display:none;" %>
+			<% end %>
+	</header>
+
+		<section class="main">
+			<input class="toggle-all" type="checkbox">
+				<label for="toggle-all">Mark Complete</label>
+					<ul class="todo-list">
+						<% @lists.each do |list| %>
+						<li>
+							<div class="view">
+								<label><%= link_to list.title, list_path(list) %></label>
+								<%= button_to "x", list_path(list), :method => "delete",
+																										:class => "destroy" %>
+						</div>
+					</li>
+					<% end %>
+				</ul>
+			</section>
+		</section>

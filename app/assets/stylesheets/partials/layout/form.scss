@@ -1,0 +1,33 @@
+.appointment-new {
+  width: 100%;
+  margin-left: 10px;
+}
+
+#new_appointment {
+  width: 100%;
+  margin-left: 10px;
+  .btn {
+    margin-left: 60px;
+  }
+  div.collection_check_boxes {
+    display: inline;
+    float: left;
+  }
+  input#appointment_categories_attributes_0_name {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+  }
+}
+
+.checkbox_container {
+  display: inline-block;
+  vertical-align: -1px;
+  margin: 5px;
+}
+
+p.check-box label {
+  display: inline-block;
+  padding: 5px;
+  font-size: 20px;
+}

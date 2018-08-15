@@ -1,0 +1,10 @@
+<li class="<%= "completed" if task.complete? %>">
+  <div class="view">
+    <%= form_for([@list, task]) do |f| %>
+      <%= f.check_box :status, class: "toggle", :checked => task.complete? %>
+    <% end %>
+  <label><%= task.name %></label>
+  <%= button_to "x", list_task_path(task.list, task), :method => "delete",
+                                                      :class => "destroy" %>
+  </div>
+</li>

@@ -1,0 +1,26 @@
+.card-deck {
+  width: 40%;
+  height: 300px;
+  margin: auto;
+  background-color: #30415D;
+  border-radius: 5px;
+  color: #C0B283;
+}
+
+.card-body h3 {
+  padding-top: 30px;
+  font-size: 80px;
+}
+
+h5 {
+  font-size: 25px;
+  font-weight: 200;
+}
+
+.card-body a {
+  font-size: 20px;
+}
+
+.card-body a:hover {
+  color: #C0B283;
+}

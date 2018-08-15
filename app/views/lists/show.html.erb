@@ -1,0 +1,21 @@
+<section class="todoapp">
+	<header class="header">
+		<h1><%= @list.title %></h1>
+		<%= form_for([@list, @task]) do |f| %>
+		  <%= f.text_field :name, placeholder: "What task do we need to complete?", class: "new-todo" %>
+		  <%= f.submit style: "display:none;" %>
+		<% end %>
+	</header>
+
+	<section class="main">
+		<input class="toggle-all" type="checkbox">
+			<label for="toggle-all">Mark all as complete</label>
+				<ul class="todo-list">
+					<%= render :collection => @list.tasks,
+										 :partial => 'tasks/task',
+										 :as => :task %>
+
+				</ul>
+
+		</section>
+	</section>

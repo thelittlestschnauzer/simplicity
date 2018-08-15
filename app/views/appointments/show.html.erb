@@ -1,0 +1,17 @@
+<div class="single-post-card">
+  <div class="card">
+    <div class="card-block">
+      <div class="appointment-content">
+        <div class="appointment-by"></div>
+        <h3><%= @appointment.title %></h3>
+        <p><%= @appointment.description %></p>
+        <p><%= @appointment.start_time.to_formatted_s(:long) %></p>
+        <p><%= @appointment.end_time.to_formatted_s(:long) %></p>
+        <p><% @appointment.categories.each do |category| %>
+            <%= link_to category.name, category %>
+            <% end %>
+        <p class="links"><%= link_to 'Edit', edit_appointment_path %> | <%= link_to 'Delete', (@appointment), method: :delete, data: {confirm: 'Are you sure?' } %></p>
+      </div>
+    </div>
+  </div><!-- card -->
+</div><!-- col-sm-3 -->

@@ -1,0 +1,58 @@
+.left-side {
+  width: 30%;
+  margin-top: 35px;
+  margin-left: 10px;
+}
+
+.right-side {
+  width: 60%;
+  margin-right: 10px;
+}
+
+.single-post-card {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  border: 3px solid #E9E9E9;
+  padding: 10px;
+  text-align: center;
+  color: #30415D;
+  font-size: 22px;
+  a {
+    color: #4EC5C1;
+    font-size: 20px;
+  }
+  a:hover {
+    color: #C0B283;
+  }
+  h3 {
+    font-size: 30px;
+  }
+}
+
+.edit-the-form {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  input.btn {
+    margin-left: 150px;
+  }
+}
+
+h3.edit-form {
+  margin-top: 50px;
+}
+
+
+.form-control {
+
+}
+
+h3.edit-form {
+  text-align: center;
+}
+
+#appointment_category_ids {
+  font-size: 20px;
+  color: #30415D;
+}

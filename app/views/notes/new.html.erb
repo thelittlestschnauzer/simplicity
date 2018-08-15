@@ -1,0 +1,14 @@
+
+<h3> Let's make some notes! </h3>
+  <div class="new-notes">
+    <%= form_for(@note) do |f| %>
+  <div>
+      <%= f.text_field :title, placeholder: "Title of note", class: "form-control" %>
+    </div>
+    <div>
+      <%= f.text_area :content, placeholder: "add some notes", class: "form-control" %>
+    </div>
+
+      <%= f.submit %><br />
+    <% end %>
+  </div>

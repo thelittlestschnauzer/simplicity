@@ -1,0 +1,25 @@
+<div class="header-container">
+  <h1 class="today-header"><%= Date.today.to_s(:long) %></h1>
+</div>
+
+<div class="row-main">
+  <div class="column">
+    <div class="events">
+      <h2><%= link_to "Events for Today", appointments_path %></h2>
+        <p><% @appointments.select{ |m| m.start_time.to_date == Date.today }.each do |appointment| %></p>
+        <p class="today-appointments"><%= appointment.title %></p>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="dinner">
+      <h2>Dinner</h2>
+      <p>List out what is for dinner</p>
+    </div>
+  </div>
+</div>
+
+<div class="inspirational-container">
+  <h3>"Let nothing come between you and your purpose"</h3>
+</div>

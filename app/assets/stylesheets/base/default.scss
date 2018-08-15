@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  min-height: 300%;
+}
+
+body {
+  background: #F4F4F4;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+i {
+  width: 26px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover, a:active, a:link, a:visited {
+  text-decoration: none;
+  color: #43C5C1;
+}
+
+.control-label {
+  display: none;
+}

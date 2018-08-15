@@ -1,0 +1,64 @@
+.header-container {
+  border-bottom: 1px solid #E9E9E9;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  height: 400px;
+  text-align: center;
+  color: #30415D;
+  border-bottom: 2px solid #E9E9E9;
+  border-right: 2px solid #E9E9E9;
+}
+
+.row-main:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.inspirational-container {
+  text-align: center;
+  margin-top: 50px;
+  font-style: italic;
+  color: #30415D;
+}
+
+.events {
+  margin-top: 150px;
+}
+
+.dinner {
+  margin-top: 150px;
+}
+
+.today-header {
+  font-size: 40px;
+  color: #4EC5C1;
+  font-family: 'Helvetica';
+  font-weight: 300;
+}
+
+.dinner h2 {
+  font-family: 'Helvetica';
+  font-weight: 300;
+}
+
+.events h2 a {
+  font-family: 'Helvetica';
+  font-weight: 300;
+}
+
+.column a:hover {
+  text-decoration: none;
+  color: #C0B283;
+}
+
+.today-appointments {
+  font-size: 25px;
+  font-style: italic;
+  color: #30415D;
+}
