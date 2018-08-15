@@ -1,11 +1,36 @@
-.new-notes {
-  margin: auto;
-  width: 80%;
-
+.notes {
+  h3 {
+    color: #3063A5;
+  }
+  .notes-header {
+    margin-bottom: 3rem;
+  }
 }
 
-.form-control {
-  margin-bottom: 10px;
-  font-size: 30px;
-  line-height: 1.4em;
+.notes-col {
+  margin-bottom: 1.5rem;
+}
+
+.note-card {
+  display: block;
+  color: #283c46;
+  background-color: #fff;
+  box-shadow: 0 1px 2px #aa9c84;
+  border-radius: 6px;
+  padding: 1.5rem;
+  height: 100%;
+
+  &:hover {
+    text-decoration: none;
+    color: #C0B283;
+  }
+
+  h4 {
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
 }
