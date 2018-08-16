@@ -1,19 +1,21 @@
 class NotesController < ApplicationController
 
-
-  def new
+  def index
+    @notes = Note.all
     @note = Note.new
   end
 
   def create
     @note = Note.new(note_params)
-    @note.save
 
-    redirect_to notes_path(@note)
-  end
+    respond_to do |format|
 
-  def index
-    @notes = Note.all
+      if @note.save
+        format.js
+      else
+        format.json { render json: @note.errors.messages, status: :unprocessable_entity }
+      end
+    end
   end
 
 
@@ -25,6 +27,6 @@ class NotesController < ApplicationController
   private
 
   def note_params
-    params.require(:note).permit(:title, :content, :created_on)
+    params.require(:note).permit(:title, :content, :created_on, :user_id)
   end
 end

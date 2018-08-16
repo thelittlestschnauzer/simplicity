@@ -17,7 +17,9 @@ Rails.application.routes.draw do
     get '/signup', to: 'devise/registrations#new'
   end
 
-
+  devise_scope :user do
+    get '/logout', to: 'devise/sessions#destroy'
+  end 
 
   # devise_for :users, :controllers => { :registrations => "registrations" }
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }

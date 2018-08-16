@@ -1,0 +1,12 @@
+
+var noteList = document.getElementById('note-list')
+var notePopover = document.getElementById('new-note-popover')
+var noteTitleInput = document.getElementById('note-title-input')
+var newNote = '<%= escape_javascript(render "note_card.html", note: @note) %>'
+// we create a new elemend to get our newNote working
+var div = document.createElement('div')
+// add newNote string to the inner html of the empty div just created
+div.innerHTML = newNote
+// append the first child of our div variable which is the note-card to the note list
+noteList.appendChild(div.firstChild)
+notePopover.classList.add('is-hidden')

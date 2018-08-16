@@ -4,11 +4,13 @@
     <div class="col-md-1 mr-auto">
       <button id="new-note-button" class="btn btn-primary mr-auto">new</button>
       <div id="new-note-popover" class="note-popover is-hidden">
+        <%= form_with(model: @note) do |f| %>
         <div class="form-group">
-          <input type="text" placeholder="next idea" class="form-control" autofocus>
+          <%= f.text_field :title, class: "form-control",  id: "note-title-input", placeholder: "next idea", autoFocus: true %>
         </div>
-        <button type="submit" id="save-button" class="btn btn-success">save</button>
+        <%= f.submit "save", id: "save-button", class: "btn btn-success" %>
         <button id="cancel-note-popover" class="btn btn-secondary">maybe not</button>
+        <% end %>
       </div>
     </div>
 
@@ -21,55 +23,9 @@
       </div>
    </div>
 
-   <div class="row home-notes">
-     <div class="col-md-4 note-col">
-        <a href="#" class="note-card">
-          <h4>Just a thought</h4>
-          <p class="note-paragraph">Happy journaling leads to a positive life so journal.</p>
-        </a>
-      </div>
-
-      <div class="col-md-4 note-col">
-        <a href="#" class="note-card">
-          <h4>Goals</h4>
-          <p class="note-paragraph">What goals can I turn into reality</p>
-        </a>
-      </div>
-
-      <div class="col-md-4 note-col">
-        <a href="#" class="note-card">
-          <h4>Another project</h4>
-          <p class="note-paragraph">Need to plan a project</p>
-        </a>
-      </div>
-
-      <div class="col-md-4 note-col">
-        <a href="#" class="note-card">
-          <h4>Ideas for a book</h4>
-          <p class="note-paragraph">children's book series with Salty as the main character</p>
-        </a>
-      </div>
-
-      <div class="col-md-4 note-col">
-        <a href="#" class="note-card">
-          <h4>Goals</h4>
-          <p class="note-paragraph">What goals can I turn into reality</p>
-        </a>
-      </div>
-
-        <div class="col-md-4 note-col">
-          <a href="#" class="note-card">
-            <h4>Just a thought</h4>
-            <p class="note-paragraph">Happy journaling leads to a positive life so journal.</p>
-          </a>
-        </div>
-
-      <div class="col-md-4 note-col">
-        <a href="#" class="note-card">
-          <h4>Another project</h4>
-          <p class="note-paragraph">Need to plan a project</p>
-        </a>
-      </div>
-    </div>
+   <div id="note-list" class="row home-notes">
+     <% @notes.each do |note| %>
+        <%= render 'note_card', note: note %>
+    <% end %>
   </div>
 </main>
