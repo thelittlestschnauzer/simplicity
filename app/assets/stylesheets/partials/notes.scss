@@ -2,6 +2,9 @@
   h3 {
     color: #3063A5;
     font-size: 2.0rem;
+    font-family: 'Helvetica';
+    font-size: 40px;
+    font-weight: 300;
   }
   .home-header {
     margin-bottom: 3rem;
@@ -48,10 +51,42 @@ main.container {
   border: 1px solid rgba(0,0,0,0.25);
   box-shadow: 0 3px 10px rgba(0,0,0,0.25);
   z-index: 1;
-  background-color: #E9E9E9;
+  background-color: #30415D;
   padding: 1rem 1rem 2rem;
+}
+
+#new-note-button {
+  background-color: #F4F4F4;
+  color: #C0B283;
+  border-color: #F4F4F4;
+  font-style: italic;
+  font-size: 20px;
+}
+
+#save-button {
+  background-color: #C0B283;
+  color: #30415D;
+  border-color: #30415D;
+}
+
+#cancel-note-popover {
+  background-color: #C0B283;
+  color: #30415D;
+  border-color: #30415D;
+}
+
+.text-center {
+  color: #30415D;
+}
+
+#dot-button {
+  color: #30415D;
 }
 
 .is-hidden {
   display: none;
+}
+
+.note-paragraph {
+  font-style: italic;
 }
