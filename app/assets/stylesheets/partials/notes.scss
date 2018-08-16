@@ -1,13 +1,14 @@
-.notes {
+.home {
   h3 {
     color: #3063A5;
+    font-size: 2.0rem;
   }
-  .notes-header {
+  .home-header {
     margin-bottom: 3rem;
   }
 }
 
-.notes-col {
+.note-col {
   margin-bottom: 1.5rem;
 }
 
@@ -33,4 +34,24 @@
   p {
     font-size: 1.2rem;
   }
+}
+
+main.container {
+  margin-top: 4rem;
+}
+
+.note-popover {
+  width: 250px;
+  position: absolute;
+  top: 3rem;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.25);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.25);
+  z-index: 1;
+  background-color: #E9E9E9;
+  padding: 1rem 1rem 2rem;
+}
+
+.is-hidden {
+  display: none;
 }

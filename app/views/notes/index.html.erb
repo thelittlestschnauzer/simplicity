@@ -1,45 +1,75 @@
-<div class="container">
-  <div class="row">
-    <div id="main-notes">
-      <main class="container note">
-        <div class="row notes-header">
-          <div class="col-md-1 mr-auto">
-            <button class="btn btn-primary mr-auto">New</button>
-          </div>
-          <div class="col-md-4">
-            <h3 class="text-center">Notes</h3>
-          </div>
-          <div class="col-md-1 ml-auto">
-            <button class="btn ml-auto">...</button>
-          </div>
+<main class="container home">
+  <div class="row home-header">
+
+    <div class="col-md-1 mr-auto">
+      <button id="new-note-button" class="btn btn-primary mr-auto">new</button>
+      <div id="new-note-popover" class="note-popover is-hidden">
+        <div class="form-group">
+          <input type="text" placeholder="next idea" class="form-control" autofocus>
         </div>
-        <div class="row notes-projects">
-          <div class="col-md-4 notes-col">
-            <a href="#" class="note-card">
-              <h4>Just a thought</h4>
-              <p>Happy journaling leads to a positive life</p>
-            </a>
-          </div>
-          <div class="col-md-4 note-col">
-            <a href="#" class="note-card">
-              <h4>Goals</h4>
-              <p>What goals can I turn into reality</p>
-            </a>
-          </div>
-          <div class="col-md-4 note-col">
-            <a href="#" class="note-card">
-              <h4>Another project</h4>
-              <p>Need to plan a project</p>
-            </a>
-          </div>
-          <div class="col-md-4 note-col">
-            <a href="#" class="note-card">
-              <h4>Ideas for a book</h4>
-              <p>children's book series with Salty as the main character</p>
-            </a>
-          </div>
+        <button type="submit" class="btn btn-success">save</button>
+        <button id="cancel-note-popover" class="btn btn-secondary">maybe not</button>
+      </div>
+    </div>
+
+      <div class="col-md-4">
+        <h3 class="text-center">Notes</h3>
+      </div>
+
+      <div class="col-md-1 ml-auto">
+        <button class="btn ml-auto">...</button>
+      </div>
+   </div>
+
+   <div class="row home-notes">
+     <div class="col-md-4 note-col">
+        <a href="#" class="note-card">
+          <h4>Just a thought</h4>
+          <p>Happy journaling leads to a positive life so journal.</p>
+        </a>
+      </div>
+
+      <div class="col-md-4 note-col">
+        <a href="#" class="note-card">
+          <h4>Goals</h4>
+          <p>What goals can I turn into reality</p>
+        </a>
+      </div>
+
+      <div class="col-md-4 note-col">
+        <a href="#" class="note-card">
+          <h4>Another project</h4>
+          <p>Need to plan a project</p>
+        </a>
+      </div>
+
+      <div class="col-md-4 note-col">
+        <a href="#" class="note-card">
+          <h4>Ideas for a book</h4>
+          <p>children's book series with Salty as the main character</p>
+        </a>
+      </div>
+
+      <div class="col-md-4 note-col">
+        <a href="#" class="note-card">
+          <h4>Goals</h4>
+          <p>What goals can I turn into reality</p>
+        </a>
+      </div>
+
+        <div class="col-md-4 note-col">
+          <a href="#" class="note-card">
+            <h4>Just a thought</h4>
+            <p>Happy journaling leads to a positive life so journal.</p>
+          </a>
         </div>
-      </main>              
-    </div><!-- main-content-->
-  </div><!--row-->
-</div><!--container-->
+
+      <div class="col-md-4 note-col">
+        <a href="#" class="note-card">
+          <h4>Another project</h4>
+          <p>Need to plan a project</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</main>
