@@ -1,8 +1,10 @@
 
 document.addEventListener('turbolinks:load', function () {
+
   // the elements had to be assigned into variables
   const openNoteButton = document.getElementById('new-note-button')
   const notePopover = document.getElementById('new-note-popover')
+
   // this will check to see if the elements even exist. If they don't a warning will populate. (hopefully)
   if (openNoteButton && notePopover) {
     openNoteButton.addEventListener('click', function () {
@@ -16,5 +18,6 @@ document.addEventListener('turbolinks:load', function () {
 
       return notePopover.classList.add('is-hidden')
     }, false)
+
   }
 })

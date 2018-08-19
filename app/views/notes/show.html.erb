@@ -1,0 +1,14 @@
+<main class="container home">
+  <h1 class="note-title text-center">
+     <%= @note.title %>
+  </h1>
+  <div class="row">
+    <%= render "feature_card", feature_link: note_chat_path(@note.id), title: "Family", img_src: "lips", img_alt: "Lips", content: "Need to figure out how to paint fireplace." %>
+    <%= render "feature_card", feature_link: '', title: "Stuff", img_src: "coffee", img_alt: "Coffee", content: "What school supplies does Lily need?" %>
+    <%= render "feature_card", feature_link: '', title: "Silly-items", img_src: "paper_plane", img_alt: "Paper-Plane", content: "Check to be sure Salty is still breathing." %>
+    <%= render "feature_card", feature_link: '', title: "Daily", img_src: "pencil", img_alt: "Pencil", content: "Need to figure out how to paint fireplace." %>
+    <%= render "feature_card", feature_link: '', title: "Crazy", img_src: "wink_paper", img_alt: "Wink-Paper", content: "That joke bombed, need to come up with new one." %>
+    <%= render "feature_card", feature_link: '', title: "Letters", img_src: "envelope", img_alt: "Envelope", content: "I love my puppies." %>
+  </div>
+
+</main>

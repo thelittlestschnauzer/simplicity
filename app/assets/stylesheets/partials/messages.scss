@@ -1,0 +1,54 @@
+.message-wrap {
+  display: flex;
+  flex-direction: row;
+  max-width: 300px;
+  margin-bottom: 16px;
+
+  .message-main-content {
+    border-radius: 6px;
+    padding: 8px;
+  }
+
+  .message-content {
+    p {
+      margin-bottom: 0;
+      text-align: right;
+    }
+  }
+
+  .message-user {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #F4F4F4;
+    align-self: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+
+    p {
+      text-align: center;
+      align-self: center;
+      color: #C0B283;
+      margin-bottom: 0;
+    }
+  }
+
+  .message-date {
+    font-size: 0.8rem;
+    text-align: right;
+  }
+}
+
+.message-wrap.is-owned {
+  margin-left: auto;
+  justify-content: flex-end;
+
+  .message-main-content {
+    background-color: #30415D;
+  }
+
+  .message-user {
+    margin-left: 8px;
+  }
+}

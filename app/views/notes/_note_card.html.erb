@@ -1,8 +1,8 @@
 <div class="col-md-4 note-col">
-  <a href="#" class="note-card">
+  <%= link_to(note, class: "note-card") do %>
     <h4><%= note.title %></h4>
     <% if note.content %>
     <p class="note-paragraph"><%= note.content %></p>
     <% end %>
-  </a>
+  <% end %>
 </div>

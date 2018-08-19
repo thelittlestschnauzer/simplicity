@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
 
+
+
+  resources :teams
+
+  get '/message/create'
+  post '/messages', to: 'messages#create'
+
   resources :notes
+  get '/notes/:id/chat', to: 'notes#chat', as: 'note_chat'
 
   resources :lists do
     resources :tasks
@@ -19,7 +27,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     get '/logout', to: 'devise/sessions#destroy'
-  end 
+  end
 
   # devise_for :users, :controllers => { :registrations => "registrations" }
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
