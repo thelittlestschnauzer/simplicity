@@ -25,9 +25,8 @@ class NotesController < ApplicationController
 
   def chat
     @message = Message.new
-    # this finds the messages for the specific note
+    # let's find the messages for this note 
     @messages = Message.where note_id: params[:id]
-
     @note = Note.find(params[:id])
   end
 

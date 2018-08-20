@@ -1,15 +1,10 @@
 Rails.application.routes.draw do
 
-
-
   resources :teams
-
-  get '/message/create'
-  post '/messages', to: 'messages#create'
 
   resources :notes
   get '/notes/:id/chat', to: 'notes#chat', as: 'note_chat'
-
+  post '/messages', to: 'message#create'
   resources :lists do
     resources :tasks
   end

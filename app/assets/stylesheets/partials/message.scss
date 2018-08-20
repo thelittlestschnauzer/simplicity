@@ -7,6 +7,8 @@
   .message-main-content {
     border-radius: 6px;
     padding: 8px;
+    background-color: #4EC5C1;
+    color: #30415D;
   }
 
   .message-content {
@@ -20,11 +22,12 @@
     height: 25px;
     width: 25px;
     border-radius: 50%;
-    background-color: #F4F4F4;
+    background-color: #30415D;
     align-self: center;
     display: flex;
     align-content: center;
     justify-content: center;
+    
 
     p {
       text-align: center;
@@ -40,12 +43,12 @@
   }
 }
 
-.message-wrap.is-owned {
+.message-wrap .is-owned {
   margin-left: auto;
   justify-content: flex-end;
 
   .message-main-content {
-    background-color: #30415D;
+    background-color: #C5C1C0;
   }
 
   .message-user {

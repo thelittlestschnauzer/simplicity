@@ -1,12 +1,11 @@
-class MessagesController < ApplicationController
-
+class MessageController < ApplicationController
   def create
     @message = Message.new(message_params)
+
     if @message.save
       format.js
     end
   end
-
 
   private
 
