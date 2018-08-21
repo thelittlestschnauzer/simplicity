@@ -15,12 +15,6 @@
     <%= yield %>
 
     <%= render 'layouts/footer' %>
-    <script>
-      <% if @note.id %>
-        window.noteId = "<%= @note.id %>";
-      <% else %>
-        window.noteId = null
-      <% end %>
-    </script>
+    
   </body>
 </html>

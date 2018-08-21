@@ -3,10 +3,17 @@
   <div class="chat-wrapper feature-card">
     <div id="chat-contents" class="chat-contents">
     </div>
-    <%= form_for @message, remote: true, url: "/messages", html: {id: "new-message-form", class: "chat-form"} do |f| %>
+    <%= form_for @message, remote: true, html: {id: "new-message-form", class: "chat-form"} do |f| %>
     <div class="form-group">
       <%= f.text_field :content, class: "form-control", id: "message-input", placeholder: "Let's chat!", autoFocus: true %>
     </div>
     <% end %>
   </div>
 </main>
+<script>
+  <% if @note.id %>
+    window.noteId = "<%= @note.id %>";
+  <% else %>
+    window.noteId = null
+  <% end %>
+</script>
