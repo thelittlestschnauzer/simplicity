@@ -12,9 +12,12 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6 }
 
+  has_many :team_members
+  has_many :teams, through: :team_members
+  
   has_many :appointments, dependent: :destroy
   has_many :lists, dependent: :destroy
-  
+
   def self.new_with_session(params, session)
     super.tap do |user|
       if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]

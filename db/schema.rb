@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_19_212736) do
+ActiveRecord::Schema.define(version: 2018_08_22_163214) do
 
   create_table "appointment_categories", force: :cascade do |t|
     t.integer "appointment_id"
@@ -60,6 +60,14 @@ ActiveRecord::Schema.define(version: 2018_08_19_212736) do
     t.datetime "created_on"
   end
 
+  create_table "recipes", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tasks", force: :cascade do |t|
     t.string "name"
     t.integer "list_id"
@@ -68,9 +76,15 @@ ActiveRecord::Schema.define(version: 2018_08_19_212736) do
     t.integer "status", default: 0
   end
 
+  create_table "team_members", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "team_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "teams", force: :cascade do |t|
     t.string "name"
-    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

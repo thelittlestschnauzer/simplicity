@@ -1,0 +1,16 @@
+
+    <h3>Work is better when you work on a Team</h3>
+      <div class="new-notes">
+        <%= form_for(@team) do |f| %>
+      <div>
+          <%= f.text_field :name, placeholder: "Team Name", class: "form-control" %>
+        </div>
+        <div>
+          <% User.all.each do |user| %>
+          <%= check_box_tag ":user_ids, User.all, :id, :name" %>
+          <%= user.name %>
+          <% end %>
+        </div>
+          <%= f.submit %><br />
+        <% end %>
+      </div>

@@ -1,25 +1,15 @@
-<div class="header-container">
-  <h1 class="today-header"><%= Date.today.to_s(:long) %></h1>
-</div>
+<main class="container home">
+  <h1 class="today-page text-center">
+    <%= Date.today.to_s(:long) %>
+  </h1>
 
-<div class="row-main">
-  <div class="column">
-    <div class="events">
-      <h2><%= link_to "Events for Today", appointments_path %></h2>
-        <p><% @appointments.select{ |m| m.start_time.to_date == Date.today }.each do |appointment| %></p>
-        <p class="today-appointments"><%= appointment.title %></p>
-      <% end %>
-    </div>
+  <div class="row">
+    <%= render "feature_card", feature_link: appointments_path, title: "Today", img_src: "font-anchor", img_alt: "Anchor", description: "" %>
+    <%= render "feature_card", feature_link: teams_path, title: "Teams", img_src: "font-coffee", img_alt: "Coffee", description: "" %>
+    <%= render "feature_card", feature_link: lists_path, title: "Lists", img_src: "paper-feather", img_alt: "Pencil", description: "" %>
+    <%= render "feature_card", feature_link: '', title: "Dinner", img_src: "fork", img_alt: "Dinner", description: "" %>
+    <%= render "feature_card", feature_link: notes_path, title: "Notes", img_src: "feather-paper-clip", img_alt: "Notes", description: "" %>
+    <%= render "feature_card", feature_link: appointments_path, title: "Appointment", img_src: "font-calendar", img_alt: "calendar", description: "" %>
+
   </div>
-
-  <div class="column">
-    <div class="dinner">
-      <h2>Dinner</h2>
-      <p>List out what is for dinner</p>
-    </div>
-  </div>
-</div>
-
-<div class="inspirational-container">
-  <h3>"Let nothing come between you and your purpose"</h3>
-</div>
+</main>

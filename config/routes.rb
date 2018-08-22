@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :recipes
+  
   resources :teams
 
   resources :notes
