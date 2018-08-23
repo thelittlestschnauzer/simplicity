@@ -4,10 +4,26 @@
       <div class="recipe">
         <div class="image_wrapper">
           <%= image_tag @recipe.image.url(:medium), class: 'recipe-image' %>
-          <h2><%= @recipe.title %></h2></br>
-          <p class="description"><%= @recipe.description %></p></br>
-          <p class="links-recipes"><%= link_to 'new', new_recipe_path %> | <%= link_to 'back', recipes_path %> | <%= link_to 'delete', method: :destroy, data: {confirm: "Are you sure?"}%></p>
-        </div>
-      </div>
-    </div>
-</div>
+          <div id="recipe_info" class="col-md-8">
+            <h1><%= @recipe.title %></h1></br>
+            <p class="description"><%= @recipe.description %></p></br>
+          </div>
+        </div><!-- image-wrapper-->
+      </div><!-- recipe-->
+    </div><!-- col-->
+</div><!-- row -->
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Ingredients</h2>
+      <ul>
+        <% @recipe.ingredients.each do |ingredient| %>
+        <li><%= ingredient.name %></li>
+        <% end %>
+      </ul>
+    </div><!-- col -->
+  </div><!-- row-->
+
+
+
+<p class="links-recipes"><%= link_to 'new', new_recipe_path %> | <%= link_to 'edit', edit_recipe_path %> | <%= link_to 'delete', method: :destroy, data: {confirm: "Are you sure?"}%></p>

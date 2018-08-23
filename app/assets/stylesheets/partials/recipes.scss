@@ -71,7 +71,7 @@ p.links-recipes {
   width: 70%;
 }
 
-#ingredients {
+#ingredients, #directions {
   background: #F4F4F4;
   @include box-shadow;
   min-height: 360px;
@@ -79,7 +79,7 @@ p.links-recipes {
   padding: 2em 8%;
 }
 
-#ingredients {
+#ingredients, #directions {
   margin-bottom: 50px;
   ul, ol {
     padding-left: 18px;
@@ -108,4 +108,9 @@ p.links-recipes {
 .add-button {
   margin-top: 25px;
   background-color: #30415D;
+}
+
+.links a:hover {
+  text-decoration: none;
+  color: #C0B283;
 }
