@@ -17,5 +17,14 @@
   <%= f.input :title, class: 'form-control recipe-form edit-form' %>
   <%= f.input :description, class: 'form-control recipe-form edit-form' %>
   <%= f.file_field :image %>
-  <%= f.button 'submit', class: 'btn' %>
+
+  <h3 id="ingredients">Ingredients</h3>
+    <% @recipe.ingredients.each do |ingredient| %>
+      <%= field_set_tag 'Ingredient' do %>
+        <%= f.simple_fields_for :ingredients, ingredient do |if| %>
+        <%= if.input :name %>
+        <% end %>
+      <% end %>
+      <%= f.button 'submit', class: 'btn' %>
+  </div>
 <% end %>
