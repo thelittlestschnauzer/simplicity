@@ -1,30 +1,27 @@
-<%= simple_form_for @recipe do |f| %>
-  <% if @recipe.errors.any? %>
-  <div id="error_explanation">
-    <h2>
-      <%= pluralize(@recipe.errors.count, "error") %>
-      this error caused the recipe not to be persisted to the database:
-    </h2>
+<%= form_for @recipe do |f| %>
+  <%= render 'shared/errors', object: @recipe %>
 
-    <ul>
-    <% @recipes.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
+     <div class="panel-body">
+
+      <%= f.text_field :title, class: 'form-control recipe-form edit-form', placeholder: 'name of recipe' %></br>
+      <%= f.text_field :description, class: 'form-control recipe-form edit-form', placeholder: 'description of your recipe' %></br>
+      <%= f.file_field :image %>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Ingredients</h3>
+        <div id="ingredients">
+          <%= f.fields_for :ingredients do |ingredient| %>
+            <%= render 'ingredient_fields', f: ingredient %>
+          <% end %>
+
+          <div class="links">
+            <%= link_to_add_association 'add ingredient', f, :ingredients %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= f.submit 'add recipe', class: 'btn' %>
   <% end %>
-
-  <%= f.input :title, class: 'form-control recipe-form edit-form' %>
-  <%= f.input :description, class: 'form-control recipe-form edit-form' %>
-  <%= f.file_field :image %>
-
-  <h3 id="ingredients">Ingredients</h3>
-    <% @recipe.ingredients.each do |ingredient| %>
-      <%= field_set_tag 'Ingredient' do %>
-        <%= f.simple_fields_for :ingredients, ingredient do |if| %>
-        <%= if.input :name %>
-        <% end %>
-      <% end %>
-      <%= f.button 'submit', class: 'btn' %>
-  </div>
-<% end %>

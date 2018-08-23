@@ -70,3 +70,42 @@ p.links-recipes {
   margin: auto;
   width: 70%;
 }
+
+#ingredients {
+  background: #F4F4F4;
+  @include box-shadow;
+  min-height: 360px;
+  border-radius: 5px;
+  padding: 2em 8%;
+}
+
+#ingredients {
+  margin-bottom: 50px;
+  ul, ol {
+    padding-left: 18px;
+    li {
+      padding: 1em 0;
+      border-bottom: 1px solid #EAEAEA;
+    }
+  }
+}
+
+.form-inline {
+  margin-top: 15px;
+}
+
+.form-input {
+  width: 65% !important;
+  float: left;
+}
+
+.form-button {
+  float: left;
+  width: 30%;
+  margin-left: 5%;
+}
+
+.add-button {
+  margin-top: 25px;
+  background-color: #30415D;
+}
