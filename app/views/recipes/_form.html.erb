@@ -1,4 +1,4 @@
-<%= bootstrap_form_for @recipe do |f| %>
+<%= simple_form_for @recipe do |f| %>
   <% if @recipe.errors.any? %>
   <div id="error_explanation">
     <h2>
@@ -14,8 +14,8 @@
   </div>
   <% end %>
 
-  <%= f.text_field :title, class: 'form-control recipe-form edit-form', placeholder: 'recipe name' %>
-  <%= f.text_area :description, class: 'form-control recipe-form edit-form', placeholder: 'description' %>
-
-  <%= f.submit 'new recipe', class: 'btn' %>
+  <%= f.input :title, class: 'form-control recipe-form edit-form' %>
+  <%= f.input :description, class: 'form-control recipe-form edit-form' %>
+  <%= f.file_field :image %>
+  <%= f.button 'submit', class: 'btn' %>
 <% end %>

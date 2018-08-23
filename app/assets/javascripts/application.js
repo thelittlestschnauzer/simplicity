@@ -12,6 +12,7 @@
 //
 //= require notes.js
 //= require jquery
+//= require cocoon
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require activestorage

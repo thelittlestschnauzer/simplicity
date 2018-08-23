@@ -1,6 +1,14 @@
-<ul>
+<div class="row">
   <% @recipes.each do |recipe| %>
-    <li><%= link_to recipe.title, recipe_path %></li>
-    <li><%= recipe.description %></li>
+    <div class="col-md-4">
+      <div class="recipe">
+        <div class="image_wrapper">
+          <%= image_tag recipe.image.url(:medium), class: 'recipe-image' %>
+          <h2><%= link_to recipe.title, recipe %></h2></br>
+          <p><%= recipe.description %></p></br>
+          <p class="links-recipes"><%= link_to 'new', new_recipe_path %> </p>
+        </div>
+      </div>
+    </div>
   <% end %>
-</ul>
+</div>
