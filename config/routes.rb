@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
   resources :recipes
-  
+
   resources :teams
 
   resources :notes
+
   get '/notes/:id/chat', to: 'notes#chat', as: 'note_chat'
   post '/messages', to: 'message#create'
   resources :lists do
@@ -26,8 +27,7 @@ Rails.application.routes.draw do
     get '/logout', to: 'devise/sessions#destroy'
   end
 
-  # devise_for :users, :controllers => { :registrations => "registrations" }
-  devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
+  devise_for :users, controllers: { registrations: 'registrations', omniauth_callbacks: 'users/omniauth_callbacks' }
 
   get 'home', to: 'home#land'
   root to: 'pages#index'

@@ -6,11 +6,11 @@ class RecipesController < ApplicationController
   end
 
   def new
-    @recipe = Recipe.new
+    @recipe = current_user.recipes.build
   end
 
   def create
-    @recipe = Recipe.new(recipe_params)
+    @recipe = current_user.recipes.build(recipe_params)
     if @recipe.save
       redirect_to @recipe
     else
@@ -45,6 +45,6 @@ class RecipesController < ApplicationController
 
   def recipe_params
     params.require(:recipe).permit(:title, :description, :image, ingredients_attributes: [:id, :name, :_destroy],
-      directions_attributes: [:id, :steps, :_destroy])
+      directions_attributes: [:id, :step, :_destroy])
   end
 end

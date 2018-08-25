@@ -1,12 +1,13 @@
+<p class="links-recipes"><%= link_to 'create a new recipe', new_recipe_path %> </p>
+
 <div class="row">
   <% @recipes.each do |recipe| %>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <div class="recipe">
         <div class="image_wrapper">
-          <%= image_tag recipe.image.url(:medium), class: 'recipe-image' %>
+          <%= image_tag recipe.image.url(:medium), class: 'recipe_image' %>
           <h2><%= link_to recipe.title, recipe %></h2></br>
-          <p><%= recipe.description %></p></br>
-          <p class="links-recipes"><%= link_to 'new', new_recipe_path %> </p>
+
         </div>
       </div>
     </div>
