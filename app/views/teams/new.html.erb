@@ -7,8 +7,8 @@
         </div>
         <div>
           <% User.all.each do |user| %>
-          <%= check_box_tag ":user_ids, User.all, :id, :name" %>
-          <%= user.name %>
+          <%= check_box_tag ":user_ids, User.all, :id, :first_name" %>
+          <%= user.first_name %>
           <% end %>
         </div>
           <%= f.submit %><br />

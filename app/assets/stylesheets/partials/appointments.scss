@@ -9,6 +9,15 @@
   margin-right: 10px;
 }
 
+#show-card {
+  margin: auto;
+  background-color: #F4F4F4;
+}
+
+#edit-card {
+  background-color: #F4F4F4;
+}
+
 .single-post-card {
   margin-left: auto;
   margin-right: auto;
@@ -55,4 +64,8 @@ h3.edit-form {
 #appointment_category_ids {
   font-size: 20px;
   color: #30415D;
+}
+
+label {
+  padding: 0 10px 0 0;
 }

@@ -1,26 +1,44 @@
+.landing {
+  margin-top: 100px;
+}
+
+div.card {
+  background-color: #30415D;
+}
+
 .card-deck {
   width: 40%;
   height: 300px;
   margin: auto;
   background-color: #30415D;
-  border-radius: 5px;
+  border-radius: 10px;
   color: #C0B283;
+}
+
+.card-body {
+  background-color: #30415D;
 }
 
 .card-body h3 {
   padding-top: 30px;
   font-size: 80px;
+  background-color: #30415D;
+  color: #C0B283;
+  font-weight: 200;
 }
 
-h5 {
+.card-body h5 {
   font-size: 25px;
   font-weight: 200;
+  color: #C0B283;
 }
 
 .card-body a {
   font-size: 20px;
+  font-weight: 200;
 }
 
 .card-body a:hover {
   color: #C0B283;
+  text-decoration: none;
 }

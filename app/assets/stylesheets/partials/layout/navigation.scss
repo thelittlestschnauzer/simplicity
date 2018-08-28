@@ -1,20 +1,27 @@
 .navbar {
   width: 100%;
   background-color: #F4F4F4;
+  height: 80px;
 
   @media(max-width: 34em) {
     background: #30415D;
   }
 
-  #logo {
+  a.navbar-brand {
   font-weight: 300;
   font-size: 35px;
   color: #4EC5C1;
   &:hover {
     color: #C0B283;
-  }
+    }
   }
 
+  span {
+    color: #4EC5C1;
+    &:hover {
+      color: #C0B283;
+    }
+  }
   .navbar-toggler {
     cursor: pointer;
     outline: 0;
